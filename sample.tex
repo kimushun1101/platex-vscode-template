@@ -1,0 +1,185 @@
+\documentclass[twocolumn]{jarticle}
+% 図をFig. に変えておく
+\renewcommand{\figurename}{Fig.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 以下必要に応じて執筆先にコピペ
+
+% 画像
+\usepackage[dvipdfmx]{graphicx}
+% リンク
+\usepackage[dvipdfmx]{hyperref}
+% 目次
+\usepackage{pxjahyper}
+% フォント関連
+\usepackage{amsfonts}
+\usepackage{amsmath, amssymb}
+\usepackage{mathrsfs}	% for \mathscr{}
+\usepackage{bm}
+% 図や表の引用
+\newcommand{\figref}[1]{Fig.\,\ref{#1}}
+\newcommand{\Figref}[1]{Figure\,\ref{#1}}
+\newcommand{\figsref}[2]{Figs.\,\ref{#1} -- \ref{#2}}
+\newcommand{\Figsref}[2]{Figures\,\ref{#1} -- \ref{#2}}
+\newcommand{\tabref}[1]{Table\,\ref{#1}}
+% 数式記号
+\newcommand{\tp}{\mathsf{T}}	% tp: transpose
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\argmin}{\mathop{\rm arg~min}\limits}
+% Theorem 関連
+% 日本語
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{definition}{定義}
+\newtheorem{theorem}[definition]{定理}
+\newtheorem{proposition}[definition]{命題}
+\newtheorem{remark}[definition]{注意}
+\renewcommand\proofname{\bf 証明}
+% % English
+% \newtheorem{definition}{Definition}
+% \newtheorem{theorem}[definition]{Theorem}
+% \newtheorem{lemma}[definition]{Lemma}
+% \newtheorem{corollary}[definition]{Corollary}
+% \newtheorem{proposition}[definition]{Proposition}
+% \newtheorem{remark}[definition]{Remark}
+% \newtheorem{example}[definition]{Example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\title{日本語 \LaTeX をVisual Studio Code で書く}
+\author{木村 駿介}
+\maketitle
+
+\section{使い方}
+論文を提出する学会などが配布しているTeX ファイルやそのスタイルファイルをこのディレクトリにコピペして，同様にビルドしてください．
+私は「学会名.tex」に名前を変えて作成しています．
+
+コピペ用のサンプルとしていくつか書き方をメモしておく．
+追加して欲しい記述がありましたらお知らせください．
+
+\section{図の挿入，定義定理}
+\begin{figure}[tb] % 画像の位置はtop かbottom
+  \begin{center}
+      \includegraphics[width=0.8\linewidth]{fig/robot.png}
+  \end{center}
+  \caption{Model of a two-wheeled mobile robot\label{fig:two_wheeled_mobile_robot}}
+\end{figure}
+
+
+\begin{definition}[2 輪車両システム]
+  \label{def:system}
+  2 輪車両型移動ロボット \figref{fig:two_wheeled_mobile_robot} を考える．
+  このとき，以下のシステムを2 輪車両システムと呼ぶ．
+
+  \begin{align}
+    \left[
+      \begin{array}{c}
+      \dot x_1 \\
+      \dot x_2 \\
+      \dot x_3 \\
+      \end{array}
+    \right]
+    =
+    \left[
+      \begin{array}{cc}
+      \cos x_3 & 0\\
+      \sin x_3 & 0\\
+      0 & 1 \\
+      \end{array}
+    \right]
+    \left[
+    \begin{array}{cc}
+    u_1 \\
+    u_2
+    \end{array}
+    \right]
+    \label{system:two_wheeled_mobile_robot}
+  \end{align}
+\end{definition}
+
+\begin{theorem}[制御則]
+  \label{theo:controller}
+  2 輪車両システムを座標・入力変換したシステムに対する制御則は
+  \begin{align}
+    \left[
+      \begin{array}{c}
+        v_1 \\
+        v_2
+      \end{array}
+    \right]
+    = 
+    \left[
+    \begin{array}{c}
+      - \left| p(\xi) g_1(\xi) \right|^{\tilde s/ 3} \sgn \left( p(\xi) g_1(\xi) \right) \\
+      - \left| p(\xi) g_2(\xi) \right|^{\tilde s/ 3} \sgn \left( p(\xi) g_2(\xi) \right)
+    \end{array}
+    \right]
+    \label{eq:controller}
+  \end{align}
+  で得られる．
+\end{theorem}
+
+\begin{proof}
+  参考文献\cite{kimura2022} を参照．
+\end{proof}
+
+\section{数式の微調整}
+\begin{proposition}
+  \label{prop:arrangement}
+  行列をゆとりをもって書くには
+
+  \verb|\renewcommand{\arraystretch}{1以上}| % 改行しないとunderfull hbox のwarning が出る
+  
+  を使用する．
+  \begin{align}
+    \renewcommand{\arraystretch}{1.5}
+    \left[
+      \begin{array}{c}
+      \frac{\partial V_\theta}{\partial \xi_1} \\
+      \frac{\partial V_\theta}{\partial \xi_2} \\
+      \frac{\partial V_\theta}{\partial \xi_3}
+      \end{array}
+    \right]^\tp
+    \renewcommand{\arraystretch}{1} % もとに戻す
+    =&
+    \left[
+      \begin{array}{c}
+        2 |\xi_3|^{3/2} \cos \theta \\
+        2 |\xi_3|^{3/2} \sin \theta \\
+        2 \sgn \xi_3
+      \end{array}
+    \right]^\tp \label{eq:dV_thetadx}
+  \end{align}
+  場合分けを行う場合の書き方は以下の通り．
+  \begin{align}
+    p(\xi) =
+    \left\{
+      \begin{array}{lcl}
+      \vspace*{ 2mm }
+      \frac{\partial V_\theta}{\partial \xi}(\xi, \theta) & : & \text{$\xi_1 = \xi_2 = 0$ のとき} \\
+      \frac{\partial V}{\partial \xi}(\xi) & : & \text{それ以外}
+      \end{array}
+    \right.
+    \label{eq:discontinuous_function_p}
+  \end{align}
+\end{proposition}
+
+\begin{remark}
+  定義，定理，命題，注意などには通番号が付けされる．
+  通し番号としたくない場合には
+
+  \verb|\newtheorem{theorem}[definition]{定理}| % 改行しないとunderfull hbox のwarning が出る
+
+  などの\verb|[definition]| を削除する．
+\end{remark}
+
+\section{ハイパーリンク}
+たとえば，定理\ref{theo:controller} をクリックするとそこにジャンプできる．
+前ページにある数式や図，参考文献の番号も同様．
+参考文献をもう1 つ出してみる\cite{kimura2020}．
+
+\bibliographystyle{junsrt}
+\bibliography{reference} % reference.bib を読み込む
+% \nocite{*} % 引用がされていないものも表示する
+\end{document}

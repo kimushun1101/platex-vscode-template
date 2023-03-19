@@ -1,0 +1,67 @@
+{
+    "[latex]": {
+        "editor.tabSize": 2,
+        "editor.wordWrap": "on",
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.bracketPairColorization.enabled": true,
+        "editor.unicodeHighlight.invisibleCharacters": true,
+        "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?。．、，（）「」『』［］｛｝《》てにをはがのともへでや ",
+        "editor.unicodeHighlight.allowedCharacters": {
+            "，": true,
+            "．": true,
+        },
+    },
+    "[bibtex]": {
+        "editor.tabSize": 2,
+        "editor.wordWrap": "on"
+    },
+    "files.exclude": {
+        // "out/*.bbl": true,
+        "out/*.log": true,
+        "out/*.dvi": true,
+        "out/*.fls": true,
+        "out/*.aux": true,
+        "out/*.blg": true,
+        "out/*.out": true,
+        "out/*.fdb_latexmk": true,
+        "out/*.synctex.gz": true
+    },
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.latex.outDir": "out",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                // "-silent",
+                "-file-line-error",
+                "-halt-on-error",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.message.latexlog.exclude": [
+        "(Font shape `(JY1|JT1|JY2|JT2)(/.*)(sl|it|sc)'.*|Some font shapes were not available.*)",
+    ],
+    "japanese-proofreading.textlint.ピリオドとカンマの使用（全角）": false,
+    "japanese-proofreading.textlint.全角文字と半角文字の間": false,
+    "japanese-proofreading.textlint.外来語カタカナ表記": false,
+    "cSpell.words": [
+        "hbox",
+        "KIMURA",
+        "kimushun",
+        "Shunsuke",
+        "SICE",
+        "underfull"
+    ],
+}
