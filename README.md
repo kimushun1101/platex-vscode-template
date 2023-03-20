@@ -17,9 +17,9 @@ pLaTeX でのビルドを行う．
 ### TeXLive
   1. [TeXLive をインストール](https://texwiki.texjp.org/?TeX%20Live#w628bee6)
   2. このフォルダをVS Code を開き，推奨拡張機能をインストールする（VS Code から提案されると思います）
-    - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
-    - [テキスト校正くん](https://marketplace.visualstudio.com/items?itemName=ICS.japanese-proofreading)
-    - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) 
+  - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+  - [テキスト校正くん](https://marketplace.visualstudio.com/items?itemName=ICS.japanese-proofreading)
+  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) 
 ### Docker
   1. [Docker をインストール](https://docs.docker.com/engine/install/)して起動
   2. このフォルダをVS Code を開き，ウィンドウ左下の`><` をクリックして`Reopen in container` をクリック
