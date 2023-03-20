@@ -3,16 +3,17 @@
 Visual Studio Code (VS Code) で日本語論文をLaTeX で書くときのテンプレート．
 pLaTeX でのビルドを行う．
 
-| ディレクトリ | 含まれるファイルの種類              |
-| ----------- | --------------------------------- |
-| .vscode     | VS Code 用の設定ファイル           |
-| fig　　     | 論文に使用する画像ファイル           |
-| out         | LaTeX による生成ファイル(PDF もここ) |
+| ディレクトリ | 含まれるファイルの種類          　　　　    |
+| ------------- | ----------------------------------- |
+| .devcontainer | Dev Container (Docker) の設定ファイル |
+| .vscode       | VS Code 用の設定ファイル           　　|
+| fig　　        | 論文に使用する画像ファイル           　　|
+| out           | LaTeX による生成ファイル(PDF もここ) 　　|
 
 ## 環境構築
 
 前提として[VS Code](https://code.visualstudio.com/) をインストールしてください．
-つぎに，TeXLive を使用するか，Docker を使用するか選べます．
+TeXLive は直接インストールして使用するか，仮想環境のDocker 上にインストールして使用するか選べます．
 
 ### TeXLive
   1. [TeXLive をインストール](https://texwiki.texjp.org/?TeX%20Live#w628bee6)
