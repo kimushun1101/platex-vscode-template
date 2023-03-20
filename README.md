@@ -13,7 +13,7 @@ pLaTeX でのビルドを行う．
 ## 環境構築
 
 前提として[VS Code](https://code.visualstudio.com/) をインストールしてください．
-TeXLive は直接インストールして使用するか，仮想環境のDocker 上にインストールして使用するか選べます．
+TeXLive は直接インストールして使用するか，仮想環境のDocker 上にインストールして使用するか，どちらでもお好みの方を選べます．
 
 ### TeXLive
   1. [TeXLive をインストール](https://texwiki.texjp.org/?TeX%20Live#w628bee6)
