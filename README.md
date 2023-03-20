@@ -11,10 +11,18 @@ pLaTeX でのビルドを行う．
 
 ## 環境構築
 
-1. [TeXLive のインストール](https://texwiki.texjp.org/?TeX%20Live#w628bee6)
-2. [VS Code のインストール](https://code.visualstudio.com/)
-3. VS Code とその拡張機能である[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) のインストール（VS Code から提案されると思います）
-4. （必須ではありませんが）追加の拡張機能として，日本語文章校正を行う[テキスト校正くん](https://marketplace.visualstudio.com/items?itemName=ICS.japanese-proofreading) や，スペルチェックを行う[Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) のインストールもオススメします．
+前提として[VS Code](https://code.visualstudio.com/) をインストールしてください．
+つぎに，TeXLive を使用するか，Docker を使用するか選べます．
+
+### TeXLive
+  1. [TeXLive をインストール](https://texwiki.texjp.org/?TeX%20Live#w628bee6)
+  2. このフォルダをVS Code を開き，推奨拡張機能をインストールする（VS Code から提案されると思います）
+    - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+    - [テキスト校正くん](https://marketplace.visualstudio.com/items?itemName=ICS.japanese-proofreading)
+    - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) 
+### Docker
+  1. [Docker をインストール](https://docs.docker.com/engine/install/)して起動
+  2. このフォルダをVS Code を開き，ウィンドウ左下の`><` をクリックして`Reopen in container` をクリック
 
 ## よく使うショートカットキー
 
@@ -34,13 +42,13 @@ pLaTeX でのビルドを行う．
 ## 動作確認
 1. `$ git clone git@github.com:kimushun1101/platex-vscode-template.git`  
   もしくは  
-  GitHub ページの`Code<>▼` から`Download ZIP`して展開する．
-2. VS Code で`File`→`Open Folder` でこのフォルダを開く．
+  GitHub ページの `Code<>▼` から `Download ZIP` して展開する．
+2. VS Code で `File`→`Open Folder` でこのフォルダを開く．（[Docker の場合](#docker)は `Reopen in container` まで行う）
 3. `sample.tex` を開いた状態で，`Ctrl` + `Alt` + `B`
-4. ビルドの完了後に`Ctrl` + `Alt` + `V`
+4. ビルドの完了後に `Ctrl` + `Alt` + `V`
 
 ## 使い方
-[動作確認](#動作確認)したディレクトリでそのまま作業（3番）を進めても良いですが，以下の手順で，ご自身のGitHub にリポジトリを作成してバージョン管理することをオススメのします．
+[動作確認](#動作確認)したディレクトリでそのまま作業（3番）を進めても良いですが，以下の手順で，ご自身のGitHub にリポジトリを作成してバージョン管理することをオススメします．
 1. [GitHub](https://github.com/) アカウントの作成．[Git](https://git-scm.com/) をインストールして使い方を習得（とりあえずclone, add, commit, push ができればよい）．
 2. `Use this template▼` から`Create a new repository`を行う．Private リポジトリとすることをオススメします．
 2. `Code<>▼` から作成したリポジトリのパスをコピーして`$ git clone 作成したリポジトリのパス`
@@ -52,6 +60,7 @@ pLaTeX でのビルドを行う．
 
 ## 参考
 - [LaTeX Workshop を使いこなす](https://qiita.com/Yarakashi_Kikohshi/items/a9357dd469320ffb65a0)
+- Dockerイメージはこちらを使用させていただきました．https://github.com/tbistr/texlive-full-devcontainer
 
 ## ライセンス
 The MIT License

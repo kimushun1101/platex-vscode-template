@@ -54,14 +54,19 @@
         "(Font shape `(JY1|JT1|JY2|JT2)(/.*)(sl|it|sc)'.*|Some font shapes were not available.*)",
     ],
     "japanese-proofreading.textlint.ピリオドとカンマの使用（全角）": false,
+    "japanese-proofreading.textlint.ピリオドとカンマの使用（半角）": false,
     "japanese-proofreading.textlint.全角文字と半角文字の間": false,
     "japanese-proofreading.textlint.外来語カタカナ表記": false,
+    "cSpell.ignorePaths": [
+        ".git/objects",
+        ".vscode",
+        ".devcontainer"
+    ],
     "cSpell.words": [
         "hbox",
-        "KIMURA",
         "kimushun",
-        "Shunsuke",
-        "SICE",
-        "underfull"
+        "platex",
+        "underfull",
+        "Zotero"
     ],
 }
