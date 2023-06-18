@@ -1,5 +1,4 @@
 # platex-vscode-template
-
 Visual Studio Code (VS Code) で日本語論文をLaTeX で書くときのテンプレート．
 pLaTeX でのビルドを行う．
 
@@ -11,7 +10,6 @@ pLaTeX でのビルドを行う．
 | out           | LaTeX による生成ファイル(PDF もここ) 　　|
 
 ## よく使うショートカットキー
-
 | ショートカットキー          |  機能                    |
 | ------------------------- | ------------------------ |
 | `Ctrl` + `Alt` + `B`  　  | ビルド                    |
@@ -26,13 +24,13 @@ pLaTeX でのビルドを行う．
 .tex ファイルの保存時にも自動ビルドが実行される設定としている．
 
 ## 環境構築
-
 前提として[VS Code](https://code.visualstudio.com/) をインストールしてください．
 LaTeX の環境はTeXLive を使用しますが，以下の3つの方法から選択できます．
 
 ### ネイティブ
 OS によってインストール方法が異なるので[TeXLive のページ](https://texwiki.texjp.org/?TeX%20Live#w628bee6)を参照．  
 Windows の場合にはコンパイル速度が遅いので他の方法をオススメします．
+
 ### Docker
 OS によってインストール方法が異なるので[Docker のページ](https://docs.docker.com/engine/install/)を参照．  
 現在のPC にLaTeX の環境構築をしたくない場合にオススメ．
@@ -57,7 +55,6 @@ sudo apt update && sudo apt install texlive-full git
 ```
 
 ## 動作確認
-
 1. Git を使用していない場合には，GitHub ページの `Code<>▼` から `Download ZIP` して展開し，VS Code で `File`→`Open Folder` でこのフォルダを開く．  
 Git が使用できる場合には以下のコマンドで，このリポジトリをクローンして開ける．
 
@@ -67,8 +64,7 @@ Git が使用できる場合には以下のコマンドで，このリポジト�
   ```
 
 2. [Docker の場合](#docker)は，Docker を起動した後にウィンドウ左下の`><` をクリックして`Reopen in container` を選択．  
-  Docker 以外の場合には，推奨拡張機能をインストールする． 
-  VS Code から提案されると思いますが、提案されない場合には，
+  Docker 以外の場合には，推奨拡張機能をインストールする．  
   `Ctrl` + `Shift` + `X` でExtensions を開き`Search Extensions in Marketplace` のテキストボックスに`@recommended` と入力すると表示される，以下の拡張機能をinstall する．  
     - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
     - [テキスト校正くん](https://marketplace.visualstudio.com/items?itemName=ICS.japanese-proofreading)
@@ -87,7 +83,7 @@ Git が使用できる場合には以下のコマンドで，このリポジト�
 
 ## BiBTeX
 BiBTeX を用いると参考文献をフォーマットを揃えて自動で出力してくれるようになります．  
-ただしBiBTeX のスタイルファイルを配布してくれている学会は少ない......
+ただしBiBTeX のスタイルファイル(.bst)を配布してくれている学会は少ない......
 - `reference.bib` は[Zotero](https://www.zotero.org/) や[Mendeley](https://www.mendeley.com/) などの文書管理ツールのエクスポート機能などで作成するか，[Google Scholar](https://scholar.google.co.jp/) より調べて`引用`→`BibTeX`などからコピーアンドペーストして加筆していくとよい．
 - bst ファイルが提供されていない場合には，`out/sample.bbl` を`sample.tex` にコピーアンドペーストして，提出先が要求するフォーマットに手動で修正してください．
 
