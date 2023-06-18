@@ -64,13 +64,14 @@ Git が使用できる場合には以下のコマンドで，このリポジト�
   ```
 
 2. [Docker の場合](#docker)は，Docker を起動した後にウィンドウ左下の`><` をクリックして`Reopen in container` を選択．  
-  Docker 以外の場合には，推奨拡張機能をインストールする．  
-  `Ctrl` + `Shift` + `X` でExtensions を開き`Search Extensions in Marketplace` のテキストボックスに`@recommended` と入力すると表示される，以下の拡張機能をinstall する．  
+  Docker 以外の場合には，推奨拡張機能をインストール．  
+  `Ctrl` + `Shift` + `X` でExtensions を開き`Search Extensions in Marketplace` のテキストボックスに`@recommended` と入力すると表示される，以下の拡張機能をinstall をクリック．  
     - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
     - [テキスト校正くん](https://marketplace.visualstudio.com/items?itemName=ICS.japanese-proofreading)
     - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) 
-3. `sample.tex` を開いた状態で，`Ctrl` + `Alt` + `B`
-4. ビルドの完了後に `Ctrl` + `Alt` + `V`
+3. `sample.tex` を開いた状態で，`Ctrl` + `Alt` + `B` でビルド．
+4. ビルドの完了後に `Ctrl` + `Alt` + `V` で生成したPDF を確認．
+5. 論文を提出する学会などが配布しているTeX ファイルやそのスタイルファイルをこのディレクトリにコピーアンドペーストして，手順3，4 と同様の方法でビルド，確認．
 
 ## GitHub によるバージョン管理
 [動作確認](#動作確認)したディレクトリでそのまま作業を進めても良いが，以下の手順で，ご自身のGitHub にリポジトリを作成してバージョン管理することをオススメします．
@@ -78,8 +79,9 @@ Git が使用できる場合には以下のコマンドで，このリポジト�
 とりあえずclone, add, commit, push ができればよい．
 [VS Code 上でGUI を用いた操作](https://miya-system-works.com/blog/detail/vscode-github/)も可能．
 2. `Use this template▼` から`Create a new repository`を行う．Private リポジトリとすることをオススメします．
-2. `Code<>▼` から作成したリポジトリのパスをコピーして，端末で`git clone 作成したリポジトリのパス`を実行．
-3. 論文を提出する学会などが配布しているTeX ファイルやそのスタイルファイルをこのディレクトリにコピーアンドペーストして，[動作確認](#動作確認)と同様の方法でビルドしてください．
+3. `Code<>▼` から作成したリポジトリのパスをコピーして，端末で`git clone 作成したリポジトリのパス`を実行．
+4. [動作確認](#動作確認)と同様にビルド．
+5. 作業の区切りの良いところでgit add, commit, push する．
 
 ## BiBTeX
 BiBTeX を用いると参考文献をフォーマットを揃えて自動で出力してくれるようになります．  
