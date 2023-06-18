@@ -24,7 +24,8 @@ pLaTeX でのビルドを行う．
 .tex ファイルの保存時にも自動ビルドが実行される設定としている．
 
 ## 環境構築
-前提として[VS Code](https://code.visualstudio.com/) をインストールしてください．
+前提として[VS Code](https://code.visualstudio.com/) をインストールしてください．  
+[Git](https://git-scm.com/) は必須ではありませんが，インストールすることを推奨します．  
 LaTeX の環境はTeXLive を使用しますが，以下の3つの方法から選択できます．
 
 ### ネイティブ
@@ -73,15 +74,14 @@ Git が使用できる場合には以下のコマンドで，このリポジト�
 4. ビルドの完了後に `Ctrl` + `Alt` + `V` で生成したPDF を確認．
 5. 論文を提出する学会などが配布しているTeX ファイルやそのスタイルファイルをこのディレクトリにコピーアンドペーストして，手順3，4 と同様の方法でビルド，確認．
 
-## GitHub によるバージョン管理
+## GitHubによるバージョン管理
 [動作確認](#動作確認)したディレクトリでそのまま作業を進めても良いが，以下の手順で，ご自身のGitHub にリポジトリを作成してバージョン管理することをオススメします．
-1. [GitHub](https://github.com/) アカウントの作成．[Git](https://git-scm.com/) をインストールして使い方を習得．
-とりあえずclone, add, commit, push ができればよい．
-[VS Code 上でGUI を用いた操作](https://miya-system-works.com/blog/detail/vscode-github/)も可能．
-2. `Use this template▼` から`Create a new repository`を行う．Private リポジトリとすることをオススメします．
+1. [GitHub](https://github.com/) アカウントの作成．
+2. `Use this template▼` から`Create a new repository`を行う．Private リポジトリとすることを推奨．
 3. `Code<>▼` から作成したリポジトリのパスをコピーして，端末で`git clone 作成したリポジトリのパス`を実行．
 4. [動作確認](#動作確認)と同様にビルド．
-5. 作業の区切りの良いところでgit add, commit, push する．
+5. 作業の区切りの良いところでgit add, commit, push する．  
+[VS Code 上でGUI を用いた操作](https://miya-system-works.com/blog/detail/vscode-github/)も可能．
 
 ## BiBTeX
 BiBTeX を用いると参考文献をフォーマットを揃えて自動で出力してくれるようになります．  
