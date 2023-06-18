@@ -78,7 +78,7 @@ Git が使用できる場合には以下のコマンドで，このリポジト�
 とりあえずclone, add, commit, push ができればよい．
 [VS Code 上でGUI を用いた操作](https://miya-system-works.com/blog/detail/vscode-github/)も可能．
 2. `Use this template▼` から`Create a new repository`を行う．Private リポジトリとすることをオススメします．
-2. `Code<>▼` から作成したリポジトリのパスをコピーして`$ git clone 作成したリポジトリのパス`
+2. `Code<>▼` から作成したリポジトリのパスをコピーして，端末で`git clone 作成したリポジトリのパス`を実行．
 3. 論文を提出する学会などが配布しているTeX ファイルやそのスタイルファイルをこのディレクトリにコピーアンドペーストして，[動作確認](#動作確認)と同様の方法でビルドしてください．
 
 ## BiBTeX
