@@ -30,7 +30,7 @@ pLaTeX でのビルドを行う．
 前提として[VS Code](https://code.visualstudio.com/) をインストールしてください．
 LaTeX の環境はTeXLive を使用しますが，以下の3つの方法から選択できます．
 
-### ネイティブインストール
+### ネイティブ
 OS によってインストール方法が異なるので[TeXLive のページ](https://texwiki.texjp.org/?TeX%20Live#w628bee6)を参照．  
 Windows の場合にはコンパイル速度が遅いので他の方法をオススメします．
 ### Docker
