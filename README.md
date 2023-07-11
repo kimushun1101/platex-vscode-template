@@ -1,4 +1,5 @@
 # platex-vscode-template
+**[開発環境構築](開発環境構築)の方法も記述しています。**  
 Visual Studio Code (VS Code) で日本語論文をLaTeX で書くときのテンプレート．
 pLaTeX でのビルドを行う．
 
@@ -23,7 +24,7 @@ pLaTeX でのビルドを行う．
 
 .tex ファイルの保存時にも自動ビルドが実行される設定としている．
 
-## 環境構築
+## 開発環境構築
 前提として[VS Code](https://code.visualstudio.com/) をインストールしてください．  
 [Git](https://git-scm.com/) は必須ではありませんが，インストールすることを推奨します．  
 LaTeX の環境はTeXLive を使用しますが，以下の3つの方法から選択できます．
