@@ -90,6 +90,16 @@ BiBTeX を用いると参考文献をフォーマットを揃えて自動で出�
 - `reference.bib` は[Zotero](https://www.zotero.org/) や[Mendeley](https://www.mendeley.com/) などの文書管理ツールのエクスポート機能などで作成するか，[Google Scholar](https://scholar.google.co.jp/) より調べて`引用`→`BibTeX`などからコピーアンドペーストして加筆していくとよい．
 - bst ファイルが提供されていない場合には，`out/sample.bbl` を`sample.tex` にコピーアンドペーストして，提出先が要求するフォーマットに手動で修正してください．
 
+## 便利なスクリプト
+- `open_explorer.bash` : 現在のディレクトリをエクスプローラーで開きます．
+  ```
+  ./scripts/open_with_explorer.bash 
+  ```
+- `convert_to_eps.bash` : 引数に入れたファイルをeps に変換してfig ディレクトリに格納ます．
+  ```
+  ./scripts/convert_into_eps.bash fig/robot.png 
+  ```
+
 ## 参考
 - [LaTeX Workshop を使いこなす](https://qiita.com/Yarakashi_Kikohshi/items/a9357dd469320ffb65a0)
 - Dockerイメージはこちらを使用させていただきました．https://github.com/tbistr/texlive-full-devcontainer
