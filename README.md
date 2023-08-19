@@ -70,7 +70,8 @@ Git が使用できる場合には以下のコマンドで，このリポジト�
   `Ctrl` + `Shift` + `X` でExtensions を開き`Search Extensions in Marketplace` のテキストボックスに`@recommended` と入力すると表示される，以下の拡張機能をinstall をクリック．  
     - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
     - [テキスト校正くん](https://marketplace.visualstudio.com/items?itemName=ICS.japanese-proofreading)
-    - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) 
+    - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+    - [Tasks Shell Input](https://marketplace.visualstudio.com/items?itemName=augustocdias.tasks-shell-input)
 3. `sample.tex` を開いた状態で，`Ctrl` + `Alt` + `B` でビルド．
 4. ビルドの完了後に `Ctrl` + `Alt` + `V` で生成したPDF を確認．
 5. 論文を提出する学会などが配布しているTeX ファイルやそのスタイルファイルをこのディレクトリにコピーアンドペーストして，手順3，4 と同様の方法でビルド，確認．
@@ -90,15 +91,13 @@ BiBTeX を用いると参考文献をフォーマットを揃えて自動で出�
 - `reference.bib` は[Zotero](https://www.zotero.org/) や[Mendeley](https://www.mendeley.com/) などの文書管理ツールのエクスポート機能などで作成するか，[Google Scholar](https://scholar.google.co.jp/) より調べて`引用`→`BibTeX`などからコピーアンドペーストして加筆していくとよい．
 - bst ファイルが提供されていない場合には，`out/sample.bbl` を`sample.tex` にコピーアンドペーストして，提出先が要求するフォーマットに手動で修正してください．
 
-## 便利なスクリプト
-- `open_explorer.bash` : 現在のディレクトリをエクスプローラーで開きます．
-  ```
-  ./scripts/open_with_explorer.bash 
-  ```
-- `convert_to_eps.bash` : 引数に入れたファイルをeps に変換してfig ディレクトリに格納ます．
-  ```
-  ./scripts/convert_into_eps.bash fig/robot.png 
-  ```
+## VS Code Tasks
+(Ubuntu，WSL でテスト済み，Mac は未テスト，Windows ネイティブは非対応)  
+`Ctrl` + `Shift` + `P` で開くコマンドパレットに `run task` と入力して実行したい処理を選択できる．
+- `open the workspace with explorer`  
+    現在のプロジェクトをエクスプローラーで開きます．
+- `convert a image file into the eps format`  
+    fig ディレクトリにあるファイルを 1 つ選択する．そのファイルを eps に変換して fig ディレクトリに格納ます．
 
 ## 参考
 - [LaTeX Workshop を使いこなす](https://qiita.com/Yarakashi_Kikohshi/items/a9357dd469320ffb65a0)

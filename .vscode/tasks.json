@@ -1,0 +1,41 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "open the workspace with explorer",
+      "type": "shell",
+      "command": "./scripts/open_with_explorer.bash",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "convert a image file into the eps format",
+      "type": "shell",
+      "command": "./scripts/convert_into_eps.bash ${input:image_file}",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "image_file",
+      "type": "command",
+      "command": "shellCommand.execute",
+      "args": {
+          "command": "find fig -maxdepth 1 -type f | grep -v '\\.eps$'",
+          "cwd": "${workspaceFolder}",
+          "env": {
+              "WORKSPACE": "${workspaceFolder[0]}",
+              "FILE": "${file}",
+              "PROJECT": "${workspaceFolderBasename}"
+          }
+      }, 
+    }
+  ]
+}

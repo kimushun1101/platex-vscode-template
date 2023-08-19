@@ -20,4 +20,6 @@ elif [[ `type xdg-open` ]]; then
 else
   echo "Your environment is not supported."
   echo "Tell me about it on GitHub issues or pull requests: https://github.com/kimushun1101/platex-vscode-template"
+  exit 1
 fi
+exit 0

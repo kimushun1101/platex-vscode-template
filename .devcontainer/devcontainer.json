@@ -7,7 +7,8 @@
 			"extensions": [
 				"james-yu.latex-workshop",
 				"ics.japanese-proofreading",
-				"streetsidesoftware.code-spell-checker"
+				"streetsidesoftware.code-spell-checker",
+				"augustocdias.tasks-shell-input"
 			]
     	}
 	},

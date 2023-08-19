@@ -12,7 +12,11 @@
 
 if [ $# = 0 ]; then
   echo "[Usage] ./convert_to_eps IMG_FILE"
-  exit
+  exit 1
+fi
+if [ ![ `find . -name $1` ] ]; then
+  echo "'$1': No such flie"
+  exit 1
 fi
 
 if !(type convert > /dev/null 2>&1); then
@@ -22,3 +26,5 @@ fi
 
 cd "$(dirname $0)/../fig"
 convert $(basename $1) eps2:$(basename ${1%.*}).eps
+
+exit 0
