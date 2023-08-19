@@ -92,7 +92,7 @@ BiBTeX を用いると参考文献をフォーマットを揃えて自動で出�
 - bst ファイルが提供されていない場合には，`out/sample.bbl` を`sample.tex` にコピーアンドペーストして，提出先が要求するフォーマットに手動で修正してください．
 
 ## VS Code Tasks
-(Ubuntu，WSL でテスト済み，Mac は未テスト，Windows ネイティブは非対応)  
+(Ubuntu，WSL でテスト済み，Mac は未テスト，Windows ネイティブとDocker は未対応)  
 `Ctrl` + `Shift` + `P` で開くコマンドパレットに `run task` と入力して実行したい処理を選択できる．
 - `open the workspace with explorer`  
     現在のプロジェクトをエクスプローラーで開きます．
