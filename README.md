@@ -97,7 +97,8 @@ BiBTeX を用いると参考文献をフォーマットを揃えて自動で出�
 - `open the workspace with explorer`  
     現在のプロジェクトをエクスプローラーで開きます．
 - `convert a image file into the eps format`  
-    fig ディレクトリにあるファイルを 1 つ選択する．そのファイルを eps に変換して fig ディレクトリに格納ます．
+    fig ディレクトリにあるファイルを 1 つ選択する．そのファイルを eps に変換して fig ディレクトリに格納します．  
+    (古いスタイルファイルなどでなければ，PNG や JPEG，PDF も読み込めますので不要です．)
 
 ## 参考
 - [LaTeX Workshop を使いこなす](https://qiita.com/Yarakashi_Kikohshi/items/a9357dd469320ffb65a0)
