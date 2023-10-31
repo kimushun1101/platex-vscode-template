@@ -53,7 +53,7 @@ wsl --install Ubuntu
 ```
 ユーザ名とパスワードを設定してログインされた後，以下のコマンドでTeXLive をインストールする．ついでにGit もインストールしておく．
 ```
-sudo apt update && sudo apt install texlive-full git
+sudo apt update && sudo apt install texlive-full git -y
 ```
 
 ## 動作確認
