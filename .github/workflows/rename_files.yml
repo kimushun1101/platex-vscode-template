@@ -1,0 +1,26 @@
+name: Rename Files
+
+on:
+  repository_dispatch:
+    types: [rename-files]
+
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Rename files
+      run: |
+        repo_name=$(basename "${{ github.event.client_payload.repository.name }}")
+        mv sample.tex "${repo_name}.tex"
+        sed -i "s/sample\./${repo_name}\./g" README.md
+        sed -i "s/sample/${repo_name}/g" .github/workflows/compile_and_release.yml
+
+    - name: Commit and push changes
+      run: |
+        git add .
+        git commit -m "Rename files based on repository name" || exit 0
+        git push
