@@ -40,5 +40,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ${{ env.TEX_FILE_NAME }}.pdf
-          asset_name: ${{ env.TEX_FILE_NAME }}_${{ github.ref }}.pdf
+          asset_name: ${{ env.TEX_FILE_NAME }}_${{ github.ref_name }}.pdf
           asset_content_type: application/pdf
