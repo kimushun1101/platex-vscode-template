@@ -100,6 +100,18 @@ BiBTeX を用いると参考文献をフォーマットを揃えて自動で出�
     fig ディレクトリにあるファイルを 1 つ選択する．そのファイルを eps に変換して fig ディレクトリに格納します．  
     (古いスタイルファイルなどでなければ，PNG や JPEG，PDF も読み込めますので不要です．)
 
+## PDF ファイルのリリース
+
+Git tag をつけて push すると，その時点での PDF を GitHub Release にアップロードするようにしています．  
+リポジトリの権限を `Setting` → `Actions` → `General` → `Workflow permissions` を `Read and write permissions` としてください．
+`Ctrl` + `J` で出る `TERMINAL` に以下のコマンドを実行する．
+```
+git tag -a タグ名 -m 'メッセージ'
+git tag push タグ名
+```
+GitHub Actions が完了した後，`Releases` から PDF が確認できる．
+
+
 ## 参考
 - [LaTeX Workshop を使いこなす](https://qiita.com/Yarakashi_Kikohshi/items/a9357dd469320ffb65a0)
 - Dockerイメージはこちらを使用させていただきました．https://github.com/tbistr/texlive-full-devcontainer
