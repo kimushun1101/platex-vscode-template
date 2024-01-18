@@ -102,14 +102,16 @@ BiBTeX を用いると参考文献をフォーマットを揃えて自動で出�
 
 ## PDF ファイルのリリース
 
-Git tag をつけて push すると，その時点での PDF を GitHub Release にアップロードするようにしています．  
-リポジトリの権限を `Setting` → `Actions` → `General` → `Workflow permissions` を `Read and write permissions` としてください．
-`Ctrl` + `J` で出る `TERMINAL` に以下のコマンドを実行する．
-```
-git tag -a タグ名 -m 'メッセージ'
-git tag push タグ名
-```
-GitHub Actions が完了した後，`Releases` から PDF が確認できる．
+Git tag をつけて push すると，その commit でのコンパイル結果である PDF を GitHub Release に自動でアップロードします．  
+1. GitHub のページで，リポジトリの権限を `Setting` → `Actions` → `General` → `Workflow permissions` を `Read and write permissions` としてください．
+2. VS Code で `.github/workflows/compile_and_release.yml` の `TEX_FILE_NAME` をコンパイルしたいファイル名（拡張子なし）で設定する．
+3. VS Code で `Ctrl` + `J` で出る `TERMINAL` に以下のコマンドを実行する．  
+    `タグ名`や`メッセージ`は適宜変更してください．
+    ```
+    git tag -a タグ名 -m 'メッセージ'
+    git tag push タグ名
+    ```
+4. GitHub のページで，GitHub Actions が完了した後，`Releases` から PDF が確認できる．
 
 
 ## 参考
