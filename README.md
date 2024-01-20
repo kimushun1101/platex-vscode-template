@@ -109,7 +109,7 @@ Git tag をつけて push すると，その commit でのコンパイル結果�
     `タグ名`や`メッセージ`は適宜変更してください．
     ```
     git tag -a タグ名 -m 'メッセージ'
-    git tag push タグ名
+    git push origin タグ名
     ```
 4. GitHub のページで，GitHub Actions が完了した後，`Releases` から PDF が確認できる．
 
