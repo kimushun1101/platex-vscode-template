@@ -57,7 +57,7 @@ sudo apt update && sudo apt install texlive-full git -y
 ```
 
 ## 動作確認
-1. Git を使用していない場合には，GitHub ページの `Code<>▼` から `Download ZIP` して展開し，VS Code で `File`→`Open Folder` でこのフォルダを開く．  
+1. Git を使用していない場合には，GitHub ページの `<>Code▼` から `Download ZIP` して展開し，VS Code で `File`→`Open Folder` でこのフォルダを開く．  
 Git が使用できる場合には以下のコマンドで，このリポジトリをクローンして開ける．
 
   ```
@@ -87,12 +87,12 @@ Git が使用できる場合には以下のコマンドで，このリポジト�
 
 ## BiBTeX
 BiBTeX を用いると参考文献をフォーマットを揃えて自動で出力してくれるようになります．  
-ただしBiBTeX のスタイルファイル(.bst)を配布してくれている学会は少ない......
+ただしBiBTeX のスタイルファイル（.bst）を配布してくれている学会は少ない......
 - `reference.bib` は[Zotero](https://www.zotero.org/) や[Mendeley](https://www.mendeley.com/) などの文書管理ツールのエクスポート機能などで作成するか，[Google Scholar](https://scholar.google.co.jp/) より調べて`引用`→`BibTeX`などからコピーアンドペーストして加筆していくとよい．
 - bst ファイルが提供されていない場合には，`out/sample.bbl` を`sample.tex` にコピーアンドペーストして，提出先が要求するフォーマットに手動で修正してください．
 
 ## VS Code Tasks
-(Ubuntu，WSL でテスト済み，Mac は未テスト，Windows ネイティブとDocker は未対応)  
+（Ubuntu，WSL でテスト済み，Mac は未テスト，Windows ネイティブとDocker は未対応）  
 `Ctrl` + `Shift` + `P` で開くコマンドパレットに `run task` と入力して実行したい処理を選択できる．
 - `open the workspace with explorer`  
     現在のプロジェクトをエクスプローラーで開きます．
