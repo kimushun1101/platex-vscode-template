@@ -25,6 +25,9 @@
         "out/*.out": true,
         "out/*.fdb_latexmk": true,
         "out/*.synctex.gz": true,
+        "out/*.nav": true,
+        "out/*.snm": true,
+        "out/*.toc": true,
         "out/*.Identifier": true
     },
     "latex-workshop.intellisense.package.enabled": true,
