@@ -20,6 +20,15 @@
         "reveal": "silent"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "delete Zone.Identifier",
+      "type": "shell",
+      "command": "rm fig/*Zone.Identifier",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
     }
   ],
   "inputs": [

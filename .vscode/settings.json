@@ -24,7 +24,8 @@
         "out/*.blg": true,
         "out/*.out": true,
         "out/*.fdb_latexmk": true,
-        "out/*.synctex.gz": true
+        "out/*.synctex.gz": true,
+        "out/*.Identifier": true
     },
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.latex.outDir": "out",
