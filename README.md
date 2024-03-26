@@ -1,7 +1,8 @@
 # platex-vscode-template
 **[開発環境構築](#開発環境構築)の方法も記述しています．**  
 Visual Studio Code (VS Code) で日本語論文をLaTeX で書くときのテンプレート．
-pLaTeX でのビルドを行う．
+pLaTeX でのビルドを行う．  
+**Windows ユーザーが極力 GUI で環境構築をしたいという要望にお応えするために[説明スライド](https://github.com/kimushun1101/How-to-use-platex-vscode-template)を作成しました．**  
 
 | ディレクトリ | 含まれるファイルの種類          　　　　    |
 | ------------- | ----------------------------------- |
@@ -9,6 +10,7 @@ pLaTeX でのビルドを行う．
 | .vscode       | VS Code 用の設定ファイル           　　|
 | fig　　        | 論文に使用する画像ファイル           　　|
 | out           | LaTeX による生成ファイル(PDF もここ) 　　|
+| scripts       | VS Code Tasks から呼ばれる便利スクリプト |
 
 ## よく使うショートカットキー
 | ショートカットキー          |  機能                    |
@@ -19,8 +21,8 @@ pLaTeX でのビルドを行う．
 | `Ctrl` + `Alt` + `M`  　　| 数式プレビュの表示         |
 | `Ctrl` + `Alt` + `J` 　　 | PDF の該当の場所にジャンプ |
 | PDF を `Ctrl` + `クリック` | .tex の該当の行にジャンプ |
-| `Ctrl` + `Shift` + `M`    | エラーやワーニングの確認  |
-| `Ctrl` + `Shift` + `U`    | ログファイルの確認       |
+<!-- | `Ctrl` + `Shift` + `M`    | エラーやワーニングの確認  |
+| `Ctrl` + `Shift` + `U`    | ログファイルの確認       | -->
 
 .tex ファイルの保存時にも自動ビルドが実行される設定としている．
 
@@ -99,6 +101,9 @@ BiBTeX を用いると参考文献をフォーマットを揃えて自動で出�
 - `convert a image file into the eps format`  
     fig ディレクトリにあるファイルを 1 つ選択する．そのファイルを eps に変換して fig ディレクトリに格納します．  
     (古いスタイルファイルなどでなければ，PNG や JPEG，PDF も読み込めますので不要です．)
+- `delete Zone.Identifier`  
+    fig ディレクトリにある Zone.Identifier ファイルを削除します．  
+    Zone.Identifier ファイルは Windows から画像ファイルを WSL のフォルダに移したときに生成される．
 
 ## PDF ファイルのリリース
 
