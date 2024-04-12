@@ -2,7 +2,7 @@
 **[開発環境構築](#開発環境構築)の方法も記述しています．**  
 Visual Studio Code (VS Code) で日本語論文をLaTeX で書くときのテンプレート．
 pLaTeX でのビルドを行う．  
-**Windows ユーザーが極力 GUI で環境構築をしたいという要望にお応えするために[説明スライド](https://github.com/kimushun1101/How-to-use-platex-vscode-template)を作成しました．**  
+**Windows ユーザーが極力 GUI で環境構築をしたいという要望にお応えするために[説明スライド](https://kimushun1101.github.io/How-to-use-platex-vscode-template/how-to-use-platex-vscode-templete.pdf)を作成しました．**  
 
 | ディレクトリ | 含まれるファイルの種類          　　　　    |
 | ------------- | ----------------------------------- |
