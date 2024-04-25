@@ -24,7 +24,7 @@
     {
       "label": "delete Zone.Identifier",
       "type": "shell",
-      "command": "rm fig/*Zone.Identifier",
+      "command": "find . -name \"*:Zone.Identifier\" -exec rm {} \\;",
       "presentation": {
         "reveal": "silent"
       },
