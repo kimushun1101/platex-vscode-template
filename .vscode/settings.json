@@ -28,7 +28,8 @@
         "out/*.nav": true,
         "out/*.snm": true,
         "out/*.toc": true,
-        "*.Identifier": true
+        "*Zone.Identifier": true,
+        "*/*Zone.Identifier": true
     },
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.latex.outDir": "out",

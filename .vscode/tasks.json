@@ -15,7 +15,7 @@
     {
       "label": "delete Zone.Identifier",
       "type": "shell",
-      "command": "find . -name \"*:Zone.Identifier\" -exec rm {} \\;",
+      "command": "find . -name '*:Zone.Identifier' -type f -delete",
       "presentation": {
         "reveal": "silent"
       },
