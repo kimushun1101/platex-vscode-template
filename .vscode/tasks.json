@@ -6,7 +6,7 @@
     {
       "label": "convert a image file into the eps format",
       "type": "shell",
-      "command": "./scripts/convert_into_eps.bash ${input:image_file}",
+      "command": "[[ ${input:image_file} == *.pdf ]] && pdftops -eps ${input:image_file} || convert ${input:image_file} eps2:$(echo ${input:image_file} | sed 's/\\(.*\\)\\..*/\\1.eps/')",
       "presentation": {
         "reveal": "silent"
       },

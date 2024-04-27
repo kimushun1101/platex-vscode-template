@@ -53,9 +53,9 @@ PowerShell を開き，以下のコマンドを入力することでWSL にUbunt
 ```
 wsl --install Ubuntu
 ```
-ユーザ名とパスワードを設定してログインされた後，以下のコマンドでTeXLive をインストールする．ついでにGit もインストールしておく．
+ユーザ名とパスワードを設定してログインされた後，以下のコマンドでTeXLive をインストールする．ついでに Git と ImageMagick もインストールしておく．
 ```
-sudo apt update && sudo apt install texlive-full git -y
+sudo apt update && sudo apt install texlive-full git imagemagick -y
 ```
 
 ## 動作確認
@@ -100,6 +100,7 @@ BiBTeX を用いると参考文献をフォーマットを揃えて自動で出�
 - `convert a image file into the eps format`  
     fig ディレクトリにあるファイルを 1 つ選択する．そのファイルを eps に変換して fig ディレクトリに格納します．  
     (古いスタイルファイルなどでなければ，PNG や JPEG，PDF も読み込めますので不要です．)
+    ImageMagick のインストールが必要です．
 - `delete Zone.Identifier`  
     fig ディレクトリにある Zone.Identifier ファイルを削除します．  
     Zone.Identifier ファイルは Windows から画像ファイルを WSL のフォルダに移したときに生成される．
