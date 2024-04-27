@@ -68,9 +68,11 @@
         ".devcontainer"
     ],
     "cSpell.words": [
+        "devcontainer",
         "hbox",
         "kimushun",
         "platex",
+        "texlive",
         "underfull",
         "Zotero"
     ],
