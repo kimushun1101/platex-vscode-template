@@ -28,7 +28,7 @@
       "type": "command",
       "command": "shellCommand.execute",
       "args": {
-          "command": "find fig -maxdepth 1 -type f | grep -v '\\.eps$'",
+        "command": "find fig -type f \\( -name \"*.pdf\" -o -name \"*.svg\" -o -name \"*.jpeg\" -o -name \"*.png\" \\)",
           "cwd": "${workspaceFolder}",
           "env": {
               "WORKSPACE": "${workspaceFolder[0]}",
