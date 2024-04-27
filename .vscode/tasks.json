@@ -20,6 +20,15 @@
         "reveal": "silent"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "convert from SJIS into UTF-8",
+      "type": "shell",
+      "command": "mkdir -p template_origin && mv ${input:text_file} template_origin/$(basename ${input:text_file}) && iconv -f SJIS-win template_origin/$(basename ${input:text_file}) > ${input:text_file}",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
     }
   ],
   "inputs": [
@@ -29,6 +38,20 @@
       "command": "shellCommand.execute",
       "args": {
         "command": "find fig -type f \\( -name \"*.pdf\" -o -name \"*.svg\" -o -name \"*.jpeg\" -o -name \"*.png\" \\)",
+          "cwd": "${workspaceFolder}",
+          "env": {
+              "WORKSPACE": "${workspaceFolder[0]}",
+              "FILE": "${file}",
+              "PROJECT": "${workspaceFolderBasename}"
+          }
+      }, 
+    },
+    {
+      "id": "text_file",
+      "type": "command",
+      "command": "shellCommand.execute",
+      "args": {
+        "command": "find . -maxdepth 1 -type f \\( -name \"*.tex\" -o -name \"*.cls\" \\)",
           "cwd": "${workspaceFolder}",
           "env": {
               "WORKSPACE": "${workspaceFolder[0]}",
