@@ -52,7 +52,7 @@ wsl --install
 その後PC を一度再起動する．
 PowerShell を開き，以下のコマンドを入力することでWSL にUbuntu をインストール．
 ```
-wsl --install Ubuntu
+wsl --install -d Ubuntu
 ```
 ユーザ名とパスワードを設定してログインされた後，以下のコマンドでTeXLive をインストールする．ついでに Git と ImageMagick もインストールしておく．
 ```
