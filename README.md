@@ -3,6 +3,7 @@
 Visual Studio Code (VS Code) で日本語論文をLaTeX で書くときのテンプレート．
 pLaTeX でのビルドを行う．  
 **Windows ユーザーが極力 GUI で環境構築をしたいという要望にお応えするために[説明スライド](https://kimushun1101.github.io/How-to-use-platex-vscode-template/how-to-use-platex-vscode-templete.pdf)を作成しました．**  
+LaTeX 自体の説明や書き方については，[sample.tex](./sample.tex) や[岡島先生の制御工学ブログ](https://blog.control-theory.com/entry/latex-paper) などが参考になると思います．  
 
 | ディレクトリ | 含まれるファイルの種類          　　　　    |
 | ------------- | ----------------------------------- |
