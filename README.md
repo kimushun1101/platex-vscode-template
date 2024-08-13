@@ -105,6 +105,10 @@ BiBTeX を用いると参考文献をフォーマットを揃えて自動で出�
 - `delete Zone.Identifier`  
     fig ディレクトリにある Zone.Identifier ファイルを削除します．  
     Zone.Identifier ファイルは Windows から画像ファイルを WSL のフォルダに移したときに生成される．
+- `convert from SJIS into UTF-8`
+    学会が配布するテンプレートが Shift JIS で提供されていた場合に，UTF-8 に変換します．  
+    念のため，変換前のファイルのコピーのバックアップもとります．
+    提出時に Shift JIS に戻したい場合には，[VS Code の機能](https://code.visualstudio.com/docs/editor/codebasics#_file-encoding-support)を使って戻すとよいでしょう．
 
 ## PDF ファイルのリリース
 
